@@ -23,6 +23,11 @@
 /*===== global =====*/
 
 .page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
   position: absolute;
   left: 40px;
   top: 0px;
@@ -51,9 +56,22 @@
 
 /*===== header =====*/
 
+.main-header {
+  display:grid;
+}
+
+.main-header-logo {
+  justify-self: center;
+}
+
 .main-navigation {
   line-height: 26px;
   font-weight: 700;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a {
@@ -78,6 +96,8 @@
   width: 1200px;
   height: 510px;
   max-width: 100%;
+  text-align: center;
+  vertical-align: middle;
 
   background-color: var(--basic-dark-blue);
   background-image: url("../img/background-main.jpg");
@@ -90,6 +110,7 @@
   height: 216px;
 
   line-height: 26px;
+  text-align: center;
 }
 
 .description h2 {
@@ -97,6 +118,31 @@
 }
 
 /*===== main =====*/
+
+.reasons-list {
+  display:grid;
+  grid-template-rows: 256px 330px 256px 256px;
+}
+
+.reasons-item {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.reasons-item:first-child{
+  order:-2;
+}
+
+.reasons-img {
+  display:block;
+}
+
+.two-reason{
+  order:-1;
+}
 
 .reasons h3 {
   font-size: 21px;
@@ -110,14 +156,27 @@
 }
 
 .second-reasons-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
   background-color: var(--basic-neutral);
 }
 
-.search-form {
-  line-height: 24px;
+.second-reasons-item {
+  text-align: center;
 }
-.search-form h2 {
-  font-size: 30px;
+
+.advantages {
+  margin: 25px;
+  order:-1;
+}
+
+.advantages-list{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+
+  text-align: center;
 }
 
 /*===== button =====*/
@@ -187,7 +246,6 @@
 .button-transparent:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
-
 }
 
 .button-sort{
@@ -215,7 +273,15 @@
   opacity: 1;
 }
 
-/*===== popup =====*/
+/*===== search-form =====*/
+
+.search-form {
+  line-height: 24px;
+  text-align: center;
+}
+.search-form h2 {
+  font-size: 30px;
+}
 
 .search-form-popup {
   width: 568px;
@@ -254,11 +320,17 @@
   background: var(--basic-transparent);
 }
 
+.main-footer .container {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .footer-contacts {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
   font-weight: 700;
+  text-align: center;
 }
 
 .phone {
@@ -272,6 +344,17 @@
 
 .logo-academy:focus svg path {
   fill: var(--basic-warm-gray);
+}
+
+.footer-copyright{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer-social {
+  width: 145px;
+  justify-self: center;
+  text-align: center;
 }
 
 /*===== social button =====*/
