@@ -116,6 +116,9 @@
   display:grid;
   grid-template-rows: 256px 330px 256px 256px;
 }
+.reasons-list:last-child {
+  background-color: var(--basic-neutral);
+}
 
 .reasons-item {
   display:grid;
@@ -152,7 +155,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
-  background-color: var(--basic-neutral);
+ 
 }
 
 .second-reasons-item {
@@ -309,13 +312,10 @@
 /*===== footer =====*/
 
 .main-footer {
-  line-height: 26px;
-  background: var(--basic-transparent);
-}
-
-.main-footer .container {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
+  line-height: 26px;
+  background: var(--basic-transparent);
 }
 
 .footer-contacts {
