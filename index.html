@@ -29,7 +29,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <h1>Седона</h1>
       <section class="welcome">
         <div class="welcome-intro"><img src="img/welcome.png" width="460" height="350"
@@ -78,7 +78,7 @@
                 </section>
               </li>
               <li class="second-reasons-item">
-                <section>
+                <section >
                   <h3>Красивая<br>
                     дорога</h3>
                   <p>— №4 —</p>
@@ -157,6 +157,27 @@
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="button button-brown" type="button"><span>Поиск гостиницы в Седоне</span></button>
+        <section class="search-form-popup">
+          <form action="catalog.html" method="get">
+            <p class="search-item search-date">
+              <label for="arrival-date">Дата заезда:</label>
+              <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
+            </p>
+            <p class="search-item search-date">
+              <label for="departure-date">Дата выезда:</label>
+              <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
+            </p>
+            <p class="search-item search-people">
+              <label for="num-adults">Взрослые:</label>
+              <input type="number" min="1" max="10" step="1" id="num-adults" name="num-adults" placeholder="2">
+            </p>
+            <p class="search-item search-people">
+              <label for="num-children">Дети:</label>
+              <input type="number" min="0" max="10" step="1" id="num-children" name="num-children" placeholder="0">
+            </p>
+            <button class="button button-blue" type="submit"><span>Найти</span></button>
+          </form>
+        </section>
       </section>
       <section class="map">
         <img src="img/map.png" width="1199" height="594"
@@ -246,28 +267,6 @@
           </a>
         </p>
     </footer>
-    <section class="search-form-popup">
-      <h2>Поиск гостиницы в Седоне</h2>
-      <form action="catalog.html" method="get">
-        <p class="search-item search-date">
-          <label for="arrival-date">Дата заезда:</label>
-          <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
-        </p>
-        <p class="search-item search-date">
-          <label for="departure-date">Дата выезда:</label>
-          <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
-        </p>
-        <p class="search-item search-people">
-          <label for="num-adults">Взрослые:</label>
-          <input type="number" min="1" max="10" step="1" id="num-adults" name="num-adults" placeholder="2">
-        </p>
-        <p class="search-item search-people">
-          <label for="num-children">Дети:</label>
-          <input type="number" min="0" max="10" step="1" id="num-children" name="num-children" placeholder="0">
-        </p>
-        <button class="button button-blue" type="submit"><span>Найти</span></button>
-      </form>
-    </section>
   </div>
 </body>
 
