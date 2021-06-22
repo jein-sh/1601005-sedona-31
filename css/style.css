@@ -125,10 +125,6 @@
   opacity: 0.3;
 }
 
-.main {
-  margin-top: -16px;
-}
-
 /*===== welcome =====*/
 
 .welcome-intro {
@@ -161,7 +157,12 @@
 }
 
 /*===== main =====*/
-.main{
+
+.main {
+  margin-top: -16px;
+}
+
+.main-index{
   grid-column-start: 1;
   grid-row-end:-1;
 }
