@@ -126,16 +126,17 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="button button-brown button-big" type="button"><span>Поиск гостиницы в Седоне</span></button>
-        <section class="search-form-popup">
+        <button class="button button-brown button-search" type="button"><span>Поиск гостиницы в Седоне</span></button>
+        <div class="box-popup">
+        <section class="search-form-popup popup-show">
           <form class="search-form-intro" action="catalog.html" method="get">
             <p class="search-item search-date">
               <label for="arrival-date">Дата заезда:</label>
-              <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
+              <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
             </p>
             <p class="search-item search-date">
               <label for="departure-date">Дата выезда:</label>
-              <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
+              <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
             </p>
             <div class="search-adults-children">
             <p class="search-item search-people">
@@ -150,23 +151,25 @@
             <button class="button button-blue button-mid" type="submit"><span>Найти</span></button>
           </form>
         </section>
+        </div>
       </section>
-      <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050596735!2d-111.83015794715254!3d34.85437338104664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1624566193562!5m2!1sru!2sru" width="1200" height="594" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <!-- <img src="img/map.png" width="1199" height="594"
-          alt="Карта, Седона расположена на юге от Флагстаффа по трассе 89А"> -->
+      <section>
+        <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050596735!2d-111.83015794715254!3d34.85437338104664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1624566193562!5m2!1sru!2sru" width="1200" height="594" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        <div class="map"><img src="img/map.png" width="1199" height="594"
+          alt="Карта, Седона расположена на юге от Флагстаффа по трассе 89А">
+        </div>
       </section>
     </main>
     <footer class="main-footer">
         <section class="footer-contacts">
           <p>#VISITSEDONA</p>
-          <a class="phone" href="tel:+78005558628">+7 (800) 555-86-28</a>
+          <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </section>
         <section class="footer-social">
           <ul class="reset-list">
             <li>
-              <a class="social-button" href="#">
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="social-button" href="#" aria-label="Твиттер">
+                <svg aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.95 1.14403C12.635 0.648028 13.934 1.41403 14.527 2.32303C15.2 2.09203 15.858 1.84203 16.538 1.61503C16.5249 2.30139 16.2117 2.94755 15.681 3.38303C16.366 3.55303 16.985 2.89203 16.985 2.89203C16.816 3.89203 15.979 4.68003 15.422 4.91603C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.98403C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.24703 0.373977 8.53003 0.447977 6.33003C0.732977 6.65803 1.51498 6.86603 1.78798 6.80203C1.08498 6.56103 -0.182023 3.44203 0.893977 1.85003C2.71198 3.70403 4.62898 5.45603 8.04598 5.62303C8.25398 3.33003 9.18298 1.79303 10.95 1.14403Z"
                     fill="white" />
@@ -174,15 +177,15 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
-                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="social-button" href="#" aria-label="Фейсбук">
+                <svg aria-hidden="true" focusable="false" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
                 </svg>
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="social-button" href="#" aria-label="Ютуб">
+                <svg aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
                     fill="white" />
@@ -193,8 +196,8 @@
         </section>
         <p class="footer-copyright">
           Website by
-          <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-            <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
+            <svg aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black" />
                 <path
@@ -241,6 +244,7 @@
         </p>
     </footer>
   </div>
+  <script src="search.js"></script>
 </body>
 
 </html>
