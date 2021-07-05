@@ -17,15 +17,15 @@
 <body class="page-body">
   <div class="container">
     <header class="main-header">
-      <a class="main-header-logo" href="index.html">
+      <a class="main-header-logo" href="index.html" aria-label="Перейти на главну страницу сайта">
         <img src="img/logo_sedona.svg" width="138" height="70" alt="Логотип Седоны">
       </a>
       <nav class="main-navigation">
         <ul class="site-navigation reset-list">
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+          <li><a href="blank.html" aria-label="Перейти на страницу с информацией о Седоне">Информация</a></li>
+          <li><a href="blank.html" aria-label="Перейти на страницу с фото и видео">Фото и видео</a></li>
+          <li><a href="blank.html" aria-label="Перейти на страницу с картой штата Аризона">Карта штата</a></li>
+          <li><a class="current-page" href="catalog.html" aria-label="Обновить страницу поиска гостиниц">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -38,15 +38,15 @@
             <legend>Инфраструктура:</legend>
             <ul class="reset-list">
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" aria-label="Выбрать наличие бассейна" checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking" aria-label="Выбрать наличие парковки">
                 <label for="filter-parking">Парковка</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Wi-fi" id="filter-Wi-fi">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Wi-fi" id="filter-Wi-fi" aria-label="Выбрать наличие Wi-Fi">
                 <label for="filter-Wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -55,15 +55,15 @@
             <legend>Тип жилья:</legend>
             <ul class="reset-list">
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" aria-label="Выбрать тип жилья гостиница" checked>
                 <label for="filter-hotel">Гостиница</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" aria-label="Выбрать тип жилья мотель" checked>
                 <label for="filter-motel">Мотель</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" aria-label="Выбрать тип жилья апартаменты" checked>
                 <label for="filter-apartments">Апартаменты</label>
               </li>
             </ul>
@@ -73,11 +73,11 @@
             <div class="range-filter">
               <div class="price-controls">
                 <label class="price min-price">
-                  от <input type="number" name="min-price" value="0">
+                  от <input type="number" name="min-price" value="0" aria-label="Выбрать минимальную стоимость за сутки в рублях">
                 </label>
                 <div class="line"></div>
                 <label class="price max-price">
-                 до <input type="number" name="max-price" value="3000">
+                 до <input type="number" name="max-price" value="3000" aria-label="Выбрать максимальную стоимость за сутки в рублях">
                 </label>
               </div>
               <div class="range-controls">
@@ -88,41 +88,37 @@
                 <div class="toggle toggle-max"></div>
               </div>
             </div>
-            <button class="button button-transparent" type="submit">Показать</button>
+            <button class="button button-transparent" type="submit" aria-label="Показать результат отбора">Показать</button>
           </fieldset>
         </form>
       </section>
-
         <section class="result">
           <h2>Найдено: 3</h2>
           <section class="sorting">
             <p>Сортировка:</p>
-            <ul class="reset-list sort">
+            <ul class="reset-list sort-option-list">
               <li class="sort-option">
-                <input class="visually-hidden sort-radio" type="radio" name="sort" id="sort-cost" checked>
-                <label for="sort-cost">По цене</label>
+                <a href="#" class="sort sort-cost current" aria-label="Сортировать по цене">По цене</a>
               </li>
               <li class="sort-option">
-                <input class="visually-hidden sort-radio" type="radio" name="sort" id="sort-type">
-                <label for="sort-type">По типу</label>
+                <a href="#" class="sort sort-type" aria-label="Сортировать по типу">По типу</a>
               </li>
               <li class="sort-option">
-                <input class="visually-hidden sort-radio" type="radio" name="sort" id="sort-rating">
-                <label for="sort-rating">По рейтингу</label>
+                <a href="#" class="sort sort-rating" aria-label="Сортировать по рейтингу">По рейтингу</a>
               </li>
             </ul>
           </section>
-          <section class="sort-up-down">
-          <label class="sort-arrow">
-            <input  class="visually-hidden sort-arrow-radio" type="radio" name="sort-up-down" id="arrow-up">
-            <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/></svg>
-          </label>
-          <label class="sort-arrow">
-            <input class="visually-hidden sort-arrow-radio" type="radio" name="sort-up-down" id="arrow-down"  checked>
-            <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 10L0 0H11" fill="#CACACA"/></svg>
-          </label>
+          <section class="descending-order">
+            <ul class="reset-list sort-up-down-list">
+              <li class="sort-up-down">
+                <a href="#" class="arrow-up-down arrow-down current" aria-label="Сортировать по возрастанию"><svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/></svg></a>
+              </li>
+              <li class="sort-up-down">
+                <a href="#" class="arrow-up-down arrow-up" aria-label="Сортировать по убыванию"><svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#CACACA"/></svg></a>
+              </li>
+            </ul>
           </section>
         </section>
         <section class="catalog">
@@ -130,62 +126,61 @@
             <li class="catalog-item">
               <article class="product">
                 <section class="product-description">
-                  <a href="blank.html" class="name-hotel">Amara Resort & Spa</a>
+                  <a href="blank.html" class="name-hotel" aria-label="Перейти на страницу гостиницы Amara Resort & Spa">Amara Resort & Spa</a>
                   <p>Гостиница</p>
                   <p>от 4000 ₽</p>
-                  <a href="blank.html" class="button-link button button-blue"><span>Подробнее</span></a>
-                  <a href="blank.html" class="button-link button button-brown"><span>Забронировать</span></a>
+                  <a href="blank.html" class="button-link button button-blue" aria-label="Узнать подробнее о гостинице Amara Resort & Spa"><span>Подробнее</span></a>
+                  <a href="blank.html" class="button-link button button-brown" aria-label="Забронировать гостиницу Amara Resort & Spa"><span>Забронировать</span></a>
                 </section>
                 <section class="product-rating">
                   <div class="rating-stars"><img src="img/icons/4stars.svg" width="91" height="17" alt="4 звезды"></div>
                   <span>Рейтинг: 8,5</span>
                 </section>
                 <div class="product-image"><img src="img/amara_resort.jpg" width="135" height="90"
-                    alt="Изображение гостиницы «Amara Resort & Spa»"></div>
+                    alt="Изображение гостиницы Amara Resort & Spa"></div>
               </article>
             </li>
             <li class="catalog-item">
               <article class="product">
                 <section class="product-description">
-                  <a href="blank.html" class="name-hotel">Desert Quail Inn</a>
+                  <a href="blank.html" class="name-hotel" aria-label="Перейти на страницу мотеля Desert Quail Inn">Desert Quail Inn</a>
                   <p>Мотель</p>
                   <p>от 3000 ₽</p>
-                  <a href="blank.html" class="button-link button button-blue"><span>Подробнее</span></a>
-                  <a href="blank.html" class="button-link button button-brown"><span>Забронировать</span></a>
+                  <a href="blank.html" class="button-link button button-blue" aria-label="Узнать подробнее о мотеле Desert Quail Inn"><span>Подробнее</span></a>
+                  <a href="blank.html" class="button-link button button-brown" aria-label="Забронировать мотель Desert Quail Inn"><span>Забронировать</span></a>
                 </section>
                 <section class="product-rating">
                   <div class="rating-stars"><img src="img/icons/3stars.svg" width="66" height="17" alt="3 звезды"></div>
                   <span>Рейтинг: 8,9</span>
                 </section>
                 <div class="product-image"><img src="img/desert_quail_inn.jpg" width="135" height="90"
-                    alt="Изображение мотеля «Desert Quail Inn»"></div>
+                    alt="Изображение мотеля Desert Quail Inn"></div>
               </article>
             </li>
             <li class="catalog-item">
               <article class="product">
                 <section class="product-description">
-                  <a href="blank.html" class="name-hotel">Villas at Poco Diablo</a>
+                  <a href="blank.html" class="name-hotel" aria-label="Перейти на страницу апартаментов Villas at Poco Diablo">Villas at Poco Diablo</a>
                   <p>Апартаменты</p>
                   <p>от 2000 ₽</p>
-                  <a href="blank.html" class="button-link button button-blue"><span>Подробнее</span></a>
-                  <a href="blank.html" class="button-link button button-brown"><span>Забронировать</span></a>
+                  <a href="blank.html" class="button-link button button-blue" aria-label="Узнать подробнее об апартаментах Villas at Poco Diablo"><span>Подробнее</span></a>
+                  <a href="blank.html" class="button-link button button-brown" aria-label="Забронировать апартаменты Villas at Poco Diablo"><span>Забронировать</span></a>
                 </section>
                 <section class="product-rating">
                   <div class="rating-stars"><img src="img/icons/2stars.svg" width="42" height="17" alt="2 звезды"></div>
                   <span>Рейтинг: 9,2</span>
                 </section>
                 <div class="product-image"><img src="img/villas_at_poco_diablo.jpg" width="135" height="90"
-                    alt="Изображение апартаментов «Villas at Poco Diablo»"></div>
+                    alt="Изображение апартаментов Villas at Poco Diablo"></div>
               </article>
             </li>
           </ul>
         </section>
-
     </main>
     <footer class="main-footer">
       <section class="footer-contacts">
         <p>#VISITSEDONA</p>
-        <a class="phone" href="tel:+78005558628">+7 (800) 555-86-28</a>
+        <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
       <section class="footer-social">
         <ul class="reset-list">

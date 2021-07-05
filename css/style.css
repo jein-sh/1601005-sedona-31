@@ -119,10 +119,14 @@
   color: var(--basic-blue);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
   color:  var(--basic-black);
   mix-blend-mode: normal;
   opacity: 0.3;
+}
+
+ .site-navigation .current-page {
+  color: var(--basic-brown);
 }
 
 /*===== welcome =====*/
@@ -293,7 +297,7 @@
   color: var(--basic-white);
 
   border: none;
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .button-link{
@@ -304,7 +308,7 @@
   line-height: 21px;
   text-decoration: none;
 }
-.button-link:focus span {
+.button-link:focus span{
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -353,11 +357,12 @@
 }
 
 .button-brown:focus {
+
   background: var(--basic-deep-brown);
   box-shadow: 0px 4px 4px  var(--basic-shadow-black);
 }
 
-.button-brown:focus span {
+.button-brown:focus span  {
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -380,6 +385,26 @@
 .button-transparent:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+.button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-icon:hover path,
+.button-icon:hover rect{
+  fill: var(--basic-black);
+}
+
+.button-icon:focus path,
+.button-icon:focus rect{
+  fill: var(--basic-blue);
 }
 
 /*===== search-form =====*/
@@ -428,7 +453,10 @@
 
 .popup-show {
   display: block;
-  animation: bounce 3s;
+  animation: bounce 1s;
+}
+.popup-error {
+  animation: shake 1s;
 }
 
 /*  ====== Animations =======*/
@@ -474,12 +502,12 @@
 }
 
 .search-item input {
-  height: 38px;
+  height: 34px;
   font:inherit;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-gray);
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   cursor: pointer;
 }
@@ -506,42 +534,29 @@
 }
 
 .search-item input:focus {
-  height: 34px;
   background-color: var(--basic-white);
   border: 2px solid var(--basic-light-gray);
 }
-.search-date input:focus {
-  width: 289px;
-}
-.search-people input:focus {
-  width: 30px;
-}
 
 .search-date {
-  width:460px;
+  position: relative;
+  width: 460px;
   margin-bottom: 30px;
 }
 
 .search-date input {
-  width: 293px;
+  width: 289px;
   padding: 0 40px 0 13px;
-  margin-left: 15px;
-}
-.search-date label{
-  position: relative;
+  margin-left: 18px;
 }
 
-.search-date label::after{
-  content: "";
+.search-date .button-calendar{
   position: absolute;
-  top: -10px;
-  right: -365px;
-  width: 38px;
-  height: 38px;
-  background-color:transparent;
-  background-image: url("../img/icons/calendar-icon.svg");
-  background-repeat: no-repeat;
-  background-position:center;
+  top: 5px;
+  right: 10px;
+
+  width: 21px;
+  height: 23px;
 }
 
 .search-adults-children {
@@ -563,40 +578,29 @@ input[type="number"]:focus {
 }
 
 .search-people input{
-  width: 34px;
+  width: 30px;
   padding: 0 40px;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 38px;
 }
-
-.search-people label{
+.search-people {
   position: relative;
 }
-
-.search-people label::before{
-  content: "";
+.search-people .button-minus{
   position: absolute;
-  top: -10px;
-  right: -70px;
-  width: 38px;
-  height: 38px;
-  background-color:transparent;
-  background-image: url("../img/icons/minus-icon.svg");
-  background-repeat: no-repeat;
-  background-position:center;
+  top: 0px;
+  right: 75px;
+  width: 34px;
+  height: 34px;
+
 }
 
-.search-people label::after{
-  content: "";
+.search-people .button-plus{
   position: absolute;
-  top: -10px;
-  right: -150px;
-  width: 38px;
-  height: 38px;
-  background-color:transparent;
-  background-image: url("../img/icons/plus-icon.svg");
-  background-repeat: no-repeat;
-  background-position:center;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
 }
 
 /*======= map =======*/
@@ -649,6 +653,10 @@ input[type="number"]:focus {
   text-decoration: none;
 }
 
+.logo-academy {
+  margin-left: 15px;
+}
+
 .logo-academy:hover path {
   fill: var(--basic-blue)
 }
@@ -667,6 +675,7 @@ input[type="number"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 36px 0;
 }
 
 .footer-social ul{
@@ -716,7 +725,8 @@ input[type="number"]:focus {
   background-color: var(--basic-dark-blue);
   background-image: url("../img/background.jpg");
   background-position: 0 0;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .filters-form {
@@ -892,47 +902,54 @@ input[type="number"]:focus {
 }
 
 .sorting p {
+  font-weight: 400px;
   margin: 0;
   margin-right: 40px;
 }
 
-.sort {
+.sort-option-list {
   display: flex;
 }
 
-.sort-radio+label{
-  padding: 0;
+.sort {
   margin-right: 32px;
-
-  text-transform: uppercase;
-  border-bottom: solid 1px;
+  text-decoration: none;
   color: var(--basic-black);
+  mix-blend-mode: normal;
   opacity: 0.3;
+  border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sort-radio:hover + label {
+.sort:hover,
+.sort.current:hover {
   color: var(--basic-blue);
   opacity: 1;
 }
 
-.sort-radio:focus + label {
+.sort:focus,
+.sort.current:focus {
   color: var(--basic-black);
   opacity: 1;
-  text-decoration: none;
+  border: none;
 }
 
-.sort-radio:checked + label {
+.sort.current {
   color: var(--basic-blue);
-  text-decoration: none;
   opacity: 1;
+  border: none;
 }
 
-.sort-up-down {
+.descending-order {
+  justify-self: flex-end;
   flex-grow: 1;
-  text-align: end;
 }
 
-.sort-arrow svg {
+.sort-up-down-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sort-up-down svg {
   margin-top: 25px;
   margin-left: 5px;
   padding: 0;
@@ -940,12 +957,12 @@ input[type="number"]:focus {
   height: 10px;
 }
 
-.sort-arrow-radio:hover +svg path{
+.arrow-up-down:hover path{
   fill: var(--basic-black)
 }
 
-.sort-arrow-radio:focus + svg path,
-.sort-arrow-radio:checked + svg path{
+.arrow-up-down:focus path,
+.arrow-up-down.current path{
   fill: var(--basic-blue)
 }
 
