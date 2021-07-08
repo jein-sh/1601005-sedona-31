@@ -6,13 +6,14 @@
   --basic-dark-brown: #604E43;
   --basic-deep-brown: #503E33;
   --basic-black: #000000;
-  --basic-neutral: #eeeeee;
-  --basic-gray: #f2f2f2;
-  --basic-white: #ffffff;
+  --basic-middle-black:#333333;
+  --basic-neutral: #EEEEEE;
+  --basic-gray: #F2F2F2;
+  --basic-white: #FFFFFF;
   --basic-dark-gray: #888888;
   --basic-warm-gray: #BDBBBC;
-  --basic-light-gray: #e5e5e5;
-  --basic-pastel-gray: #ebebeb;
+  --basic-light-gray: #E5E5E5;
+  --basic-pastel-gray: #EBEBEB;
   --basic-deep-gray: #666666;
   --basic-shadow-black: rgba(0, 0, 0, 0.25);
   --basic-white-transparent: rgba(255, 255, 255, 0.3);
@@ -92,27 +93,27 @@
 
 .site-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 80px;
-  margin: 0 72px;
+  grid-template-columns: 200px 200px 1fr 200px 200px;
+  gap: 30px;
+  margin: 14px 72px 34px;
 }
 
 .site-navigation li:nth-child(3) {
   grid-column-start: -3 ;
-  justify-self: end;
+  margin-right: -5px;
+  text-align: end;
 }
 
 .site-navigation li:nth-child(4) {
   grid-column-start: -2 ;
-  justify-self: end;
+  text-align: end;
 }
 
 .site-navigation a {
   display: inline-block;
   vertical-align: middle;
   padding: 0;
-  margin: 15px 0;
-
+ 
   font-weight: 700;
   text-decoration: none;
   color: var(--basic-black);
@@ -164,7 +165,8 @@
   width: 800px;
   margin-bottom: 52px;
   padding: 0 200px;
-
+   
+  color: var(--basic-middle-black);
   line-height: 26px;
   text-align: center;
 }
@@ -238,6 +240,7 @@
 .second-reasons-item p {
   margin: 0;
   margin-top: 25px;
+  color: var(--basic-middle-black);
 }
 
 .second-reasons-item {
@@ -267,6 +270,10 @@
 .advantage-item h3 {
   margin: 0;
   margin-bottom: 25px ;
+}
+
+.advantage-item p{
+  color: var(--basic-middle-black);
 }
 
 .advantage-item::before {
@@ -427,14 +434,19 @@
   justify-content: space-between;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.price input[type="number"]::-webkit-outer-spin-button,
+.price input[type="number"]::-webkit-inner-spin-button,
+.search-people input[type="number"]::-webkit-outer-spin-button,
+.search-people input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-input[type='number'],
-input[type="number"]:hover,
-input[type="number"]:focus {
+.price input[type='number'],
+.price input[type="number"]:hover,
+.price input[type="number"]:focus,
+.search-people input[type='number'],
+.search-people input[type="number"]:hover,
+.search-people input[type="number"]:focus {
     appearance: none;
     -moz-appearance: textfield;
 }
@@ -605,14 +617,20 @@ input[type="number"]:focus {
 }
 
 .button-link{
+  display: inline-block;
+  vertical-align: middle;
   margin-top: 10px;
   margin-right: 6px;
   padding: 3px;
-
-  font-size: 14px;
+  
   line-height: 21px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
-}
+  color: var(--basic-white);
+  cursor: pointer;
+}`
 
 .button-search {
   padding: 30px;
@@ -644,7 +662,7 @@ input[type="number"]:focus {
   background-color: var(--basic-dark-blue);
 }
 
-.button-blue:focus {
+.button-blue:active {
   color: var(--basic-white-transparent);
   background-color: var(--basic-deep-blue);
   box-shadow: 0px 4px 4px var(--basic-shadow-black);
@@ -658,7 +676,7 @@ input[type="number"]:focus {
   background-color: var(--basic-dark-brown);
 }
 
-.button-brown:focus {
+.button-brown:active {
   color: var(--basic-white-transparent);
   background-color: var(--basic-deep-brown);
   box-shadow: 0px 4px 4px  var(--basic-shadow-black);
@@ -699,8 +717,8 @@ input[type="number"]:focus {
   fill: var(--basic-black);
 }
 
-.button-icon:focus path,
-.button-icon:focus rect{
+.button-icon:active path,
+.button-icon:active rect{
   fill: var(--basic-blue);
 }
 
@@ -856,6 +874,8 @@ input[type="number"]:focus {
   border: none;
   background-color: transparent;
   color: var(--basic-white);
+  font-size: 14px;  
+  line-height: 21px;
   outline: 0;
 }
 
@@ -1032,6 +1052,7 @@ input[type="number"]:focus {
   width: 110px;
   margin: 0;
   margin-right: 6px;
+  color: var(--basic-middle-black);
 }
 
 .name-hotel {
