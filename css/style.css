@@ -620,7 +620,6 @@
   display: inline-block;
   vertical-align: middle;
   margin-top: 10px;
-  margin-right: 6px;
   padding: 3px;
 
   line-height: 21px;
@@ -1058,7 +1057,7 @@
 .name-hotel {
   padding: 0;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 
   font-size: 21px;
   line-height: 26px;
