@@ -664,7 +664,6 @@
 .button-blue:active {
   color: var(--basic-white-transparent);
   background-color: var(--basic-deep-blue);
-  box-shadow: 0px 4px 4px var(--basic-shadow-black);
 }
 
 .button-brown {
@@ -678,7 +677,6 @@
 .button-brown:active {
   color: var(--basic-white-transparent);
   background-color: var(--basic-deep-brown);
-  box-shadow: 0px 4px 4px  var(--basic-shadow-black);
 }
 
 .button-transparent {
@@ -795,7 +793,7 @@
 }
 
 .filter-option {
-  margin-left: 38px;
+  margin-left: 41px;
   margin-bottom: 25px ;
 }
 
@@ -808,7 +806,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
+  left: -41px;
   width: 23px;
   height: 23px;
   background-image: url("../img/icons/checkbox-off.svg");
@@ -820,7 +818,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
+  left: -41px;
   width: 27px;
   height: 23px;
   background-image: url("../img/icons/checkbox-on.svg");
@@ -936,21 +934,23 @@
 
 .result {
   display:flex;
-  align-items: flex-start;
+  align-items: center;
   margin: 0 72px;
-  padding-top: 2px;
+  min-height: 86px;
 }
 
 .result h2 {
-  margin: 15px 48px 48px 3px;
+  margin: 0;
+  margin-right: 48px;
+  margin-top: -3px;
 }
 
 .sorting {
   display: flex;
-  margin: 0;
-  margin-top: 16px;
+  align-items: center;
   font-size: 12px;
   line-height: 18px;
+  margin-top: -4px;
 }
 
 .sorting p {
@@ -961,6 +961,7 @@
 
 .sort-option-list {
   display: flex;
+  align-items: center;
 }
 
 .sort {
@@ -974,6 +975,7 @@
 
 .sort:hover,
 .sort.current:hover {
+  padding-bottom: 4px;
   color: var(--basic-blue);
   opacity: 1;
 }
@@ -999,11 +1001,12 @@
 .sort-up-down-list {
   display: flex;
   justify-content: flex-end;
+  margin-top: 3px;
 }
 
 .sort-up-down svg {
-  margin-top: 25px;
-  margin-left: 8px;
+  margin-left: 11px;
+ 
   padding: 0;
   width: 11px;
   height: 10px;
@@ -1057,7 +1060,7 @@
 .name-hotel {
   padding: 0;
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 
   font-size: 21px;
   line-height: 26px;
