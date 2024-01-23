@@ -113,7 +113,7 @@
   display: inline-block;
   vertical-align: middle;
   padding: 0;
- 
+
   font-weight: 700;
   text-decoration: none;
   color: var(--basic-black);
@@ -165,7 +165,7 @@
   width: 800px;
   margin-bottom: 52px;
   padding: 0 200px;
-   
+
   color: var(--basic-middle-black);
   line-height: 26px;
   text-align: center;
@@ -567,7 +567,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 }
 
 /*===== social button =====*/
@@ -869,7 +869,7 @@
   border: none;
   background-color: transparent;
   color: var(--basic-white);
-  font-size: 14px;  
+  font-size: 14px;
   line-height: 21px;
   outline: 0;
 }
@@ -1004,7 +1004,7 @@
 
 .sort-up-down svg {
   margin-left: 11px;
- 
+
   padding: 0;
   width: 11px;
   height: 10px;
